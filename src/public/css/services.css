@@ -1,0 +1,39 @@
+*{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body{
+
+    
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.table{
+
+    background-color: black;
+    height: 50%;
+    width: 100%;
+    border-collapse: separate;
+}
+
+tr, td, th {
+
+    color: white;
+    
+}
+
+h1{
+
+    margin:10px 0;
+    padding-bottom:10px;
+    color:white;
+    border-bottom:3px solid #78788c;
+    display: flex;
+    justify-content: center;
+    text-align: center !important;
+}
+
+

@@ -1,0 +1,136 @@
+*{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body{
+
+    
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.table{
+
+    background-color: black;
+    height: 50%;
+    width: 50%;
+    border-collapse: separate;
+}
+
+tr, td, th {
+
+    color: white;
+     
+}
+
+h1{
+
+    margin:10px 0;
+    padding-bottom:10px;
+    display: inline-table;
+    color:white;
+    border-bottom:3px solid #78788c;
+    text-align: center;
+}
+
+
+.volver{
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px;
+    font-weight: normal;
+    margin: 18px;
+}
+
+.volver:hover{
+
+    background-color: #fafca5;
+    color: black;
+}
+
+
+.formulario, .contenedor {
+    width: 300px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.formulario h1 {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    bottom: 25px;
+    padding: 70px 0 10px 0;
+}
+.formulario{
+    width: 400px;
+    margin: 0 auto;
+    padding: 0px 20px 60px 20px;
+    margin-top: 35px;
+    font-family: Arial, Helvetica, sans-serif;  
+    text-align: center !important;
+    box-shadow: 0 19px 38px white, 0 15px 12px white; 
+    color: white;
+    font-size: 25px;
+
+}
+.formulario input[type="date"],
+.formulario input[type="password"],
+.formulario input[type="text"] {
+
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-sizing:border-box;
+    border-radius: 5%;
+    background-color: rgb(82, 82, 82);
+    color: white; 
+    transition:all 1s;
+    border: none;
+    border-bottom: 2px solid;
+
+    
+}
+
+
+::placeholder{
+
+    color:gray;
+}
+
+#agendar{
+
+    width: 50%;
+    padding: 15px;
+    background-color: black;
+    box-shadow: 0 19px 38px white, 0 15px 12px white;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+    transition:all 1s;
+}
+
+#agendar:hover{
+
+    color:#fff;
+    background-color: #fafca5;
+    color: black;
+   
+}

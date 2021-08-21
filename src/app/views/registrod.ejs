@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/r_diario.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/bootstrap-icons.svg">
+</head>
+<body>
+
+
+  <a href="/a_logueado" class="volver"> Volver</a>
+
+      <div class="modal-body">
+        <form action="/detail" method="POST"  class="card-body">
+          <h1>Agregar detalle</h1>
+          
+          <input type="number" class="form-control" name="id_r" placeholder="Numero del registro">
+          <input type="number" class="form-control" name="id_p" placeholder="Id del producto">
+          <input type="number" class="form-control" name="cant" placeholder="Cantidad">
+          <input type="number" class="form-control" name="valor" placeholder="Valor">
+          <input type="date" class="form-control" style="width: 97%;" name="fecha" placeholder="fecha">
+    
+          <input type="submit" class="ingresar" value="Agregar">
+          </form>
+    
+        </div>
+
+
+
+        <div class="container-4">
+          <div class="row">
+              <div style="text-align:center">
+  
+                  <table class="table">
+                    <tr>
+
+                          <th>ID DETALLE</th>
+                          <th>ID PRODUCTO</th>
+                          <th>CANTIDAD</th>
+                          <th>VALOR</th>
+                          <th>FECHA</th>
+                          <th>NUMERO REGISTRO</th>
+                          <th>ELIMINAR</th>
+                          <th>EDITAR</th>
+  
+                    </tr>      
+  
+                    <% for (let i=0; i < detalle.length; i++) { %>
+                    <tr>
+
+                          <td><%= detalle[i].id_registroventa_d %></td>
+                          <td><%= detalle[i].id_producto %></td>
+                          <td><%= detalle[i].cantidad %></td>
+                          <td><%= detalle[i].valor %></td>
+                          <td><%= detalle[i].fecha %></td>
+                          <td><%= detalle[i].numero_registro %></td>
+                          <td><a href="/borrar/<%= detalle[i].id_producto %>" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg></a></td>
+                          <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= detalle[i].id_producto %>" data-bs-whatever="@mdo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                          </svg></button></td>
+                    </tr>
+
+
+                </tr>
+                <div class="modal fade" id="exampleModal<%= detalle[i].id_registroventa_d %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">EDITAR DETALLE</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <form method="POST" action="/modificar/<%= detalle[i].id_producto %>">
+                            <div class="mb-3">
+                              <label for="recipient-name" class="col-form-label">Id producto:</label>
+                              <input type="text" class="form-control" id="recipient-name" name="prod" value="<%= detalle[i].id_producto %>">
+                            </div>
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Cantidad:</label>
+                              <input type="text" class="form-control" id="recipient-name" name="cant" value="<%= detalle[i].cantidad %>">
+                            </div>
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label">Valor:</label>
+                              <input type="text" class="form-control" id="recipient-name" name="valor" value="<%= detalle[i].valor %>">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <input type="submit" class="btn btn-primary" value="Guardar">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                    <% } %>
+                  </table>
+  
+              </div>
+          </div>
+      </div>
+
+
+      
+<div class="container-1">
+  <form action="hola" method="POST" form-id="registro" class="form">
+        <h1>Agregar Registro</h1>
+        
+        <input type="number" class="form-control" name="numero_r" placeholder="Numero de registro">
+        <input type="number" class="form-control" name="Total_v" placeholder="Total de venta">
+        <select name="rol" id="rol" class="select-css">
+          <option value="Efectivo" selected>Efectivo</option>
+          <option value="Credito"selected>Credito</option>
+          <option value="" selected>Seleccionar metodo de pago</option>
+        </select>
+        <input type="text" class="form-control" name="id_u" placeholder="Id del usuario">
+        <input type="date" class="form-control" style="width: 97%;" name="date" placeholder="Fecha">
+
+        <input type="submit" class="ingresar" value="Registrar">
+  </form>
+</div>
+
+  <div class="container-2">
+        <div class="row">
+            <div style="text-align:center">
+                <table class="table">
+
+                    <tr>
+
+                        <th>ID VENTA</th>
+                        <th>FECHA</th>
+                        <th>TOTAL VENTA</th>
+                        <th>FORMA DE PAGO</th>
+                        <th>ID USUARIO</th>
+                        <th>ELIMINAR REGISTRO</th>
+                        <th>EDITAR</th>
+
+                    </tr>
+                    <% for (let i=0; i < registro.length; i++) { %>
+                    <tr>
+                        <td><%= registro[i].idregistroventa %></td>
+                        <td><%= registro[i].fecha_compra %></td>
+                        <td><%= registro[i].total_venta %></td>
+                        <td>><%= registro[i].forma_pago %></td>
+                        <td>><%= registro[i].id_usuariocliente %></td>
+                        <td><a href="/delete/<%= registro[i].idregistroventa %>" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg></a></td>
+                        <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= registro[i].idregistroventa %>" data-bs-whatever="@mdo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                          <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg></button></td>
+
+                    </tr>
+                    <div class="modal fade" id="exampleModal<%= registro[i].idregistroventa %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">EDITAR REGISTRO</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                              <form method="POST" action="/edit/<%= registro[i].idregistroventa %>">
+                                <div class="mb-3">
+                                  <label for="recipient-name" class="col-form-label">Total venta:</label>
+                                  <input type="text" class="form-control" id="recipient-name" name="total" value="<%= registro[i].total_venta %>">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Forma de pago:</label>
+                                  <input type="text" class="form-control" id="recipient-name" name="forma" value="<%= registro[i].forma_pago %>">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Id de usuario:</label>
+                                  <input type="text" class="form-control" id="recipient-name" name="id" value="<%= registro[i].id_usuariocliente %>">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <input type="submit" class="btn btn-primary" value="Editar">
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>   
+                    <% } %>
+
+                </table>
+            </div>
+        </div>
+        
+      </div>
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>

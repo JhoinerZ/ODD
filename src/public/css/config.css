@@ -1,0 +1,120 @@
+*{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body{
+
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    color: black;
+}   
+
+*{
+
+    color: white;
+}
+
+.container{
+
+    width: 90%;
+    background-color:  silver;
+}
+
+.container-2{
+    width: 90%;
+    background-color: silver;
+    
+}
+
+.table{
+
+    background-color: black;
+    height: 50%;
+    width: 50%;
+    border-collapse: separate;
+    margin-left: 1%;
+}
+
+tr, td, th {
+
+    color: white;
+    
+    
+}
+
+
+.btn-primary{
+
+    width: 50%;
+    padding: 15px;
+    background-color: black;
+    box-shadow: 0 10px 10px white, 0 5px 9px white;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    margin: 1%;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+    
+}
+
+.btn-primary:hover{
+
+    background-color: #fafca5;
+    color: black;
+}
+
+
+form input[type="number"],
+form input[type="text"],
+form input[type="submit"]{
+
+    width:97%;
+    height: 100%;
+    padding:10px;
+    box-sizing:border-box;
+    background-color:  rgb(82, 82, 82);
+    margin: 7px;
+    transition:all 1s;
+    border: none;
+    border-bottom: 2px solid;
+    color: white;
+    
+    
+}   
+
+form input[type="submit"]:hover{
+
+
+    background-color: #fafca5;
+    color: black;
+}
+
+
+.volver{
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px;
+    font-weight: normal;
+    margin: 18px;
+}
+
+.volver:hover{
+
+    background-color: #fafca5;
+    color: black;
+}

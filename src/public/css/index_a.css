@@ -1,0 +1,70 @@
+
+/*----------------CUERPO DE PAGINA---------------*/
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    color: black;
+}
+
+/*----------------------------------------------*/
+
+
+
+/*--------------------BOTON DE SALIR--------------------*/
+
+.a-logout:link, .a-logout:visited {
+    background-color: rgb(210, 173, 252);
+    color: rgb(255, 255, 255);
+    border: 2px solid #28003a;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.a-logout:hover, .a-logout:active {
+    background-color: #ffc5f5;
+    color: white;
+}
+
+/*-------------------------------------------------------*/
+
+
+
+/*-----------------BARRA DE NAVEGACION-----------------*/
+
+
+/*------------------------------------------------------*/
+
+
+
+
+/*----------------LOGO----------------*/
+
+.logo{
+
+    width: 100px; height: 80px;
+    position: relative; right: 5px;
+}
+
+/*------------------------------------*/
+
+
+.hola{
+
+    font-size: 18px;
+}
+
+.hola:hover{
+
+    background-color: rgba(128, 128, 128, 0.493);
+    border-radius: 8%;
+    margin: 8px;
+    
+}
+

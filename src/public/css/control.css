@@ -1,0 +1,142 @@
+*{
+    
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+}
+
+body{
+
+    
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.table{
+
+    background-color: black;
+    height: 50%;
+    width: 50%;
+    border-collapse: separate;
+}
+
+tr, td, th {
+
+    color: white;
+    
+    
+}
+
+h1{
+
+    color: white;
+}
+
+form{
+
+    background-color: transparent;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.select-css{
+
+    width:97%;
+    height: 100%;
+    padding:10px;
+    box-sizing:border-box;
+    background-color:  rgb(82, 82, 82);
+    transition:all 1s;
+    border: none;
+    border-bottom: 2px solid;
+    color: white;
+    
+}
+
+form input[type="number"],
+form input[type="text"],
+form input[type="submit"]{
+
+    width:97%;
+    height: 100%;
+    padding:10px;
+    box-sizing:border-box;
+    background-color:  rgb(82, 82, 82);
+    margin: 7px;
+    transition:all 1s;
+    border: none;
+    border-bottom: 2px solid;
+    color: white;
+    
+    
+}
+
+::placeholder{
+
+    color:white;    
+}
+
+form h1{
+
+    margin:10px 0;
+    padding-bottom:10px;
+    display: inline-table;
+    color:white;
+    border-bottom:3px solid #78788c;
+    text-align: center;
+}
+
+
+.ingresar{
+
+    width: 50%;
+    padding: 15px;
+    background-color: black;
+    box-shadow: 0 10px 10px white, 0 5px 9px white;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+    
+}
+.ingresar:hover{
+
+    background-color: #fafca5;
+    color: black;
+}
+
+.volver{
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px;
+    font-weight: normal;
+    margin: 18px;
+}
+
+.volver:hover{
+
+    background-color: #fafca5;
+    color: black;
+}

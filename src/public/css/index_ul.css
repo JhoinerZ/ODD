@@ -1,0 +1,78 @@
+
+
+/*--------------------CUERPO DE PAGINA------------*/
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+/*-----------------------------------------------*/
+
+
+
+/*----------CERRAR SESION-----------*/
+
+.a-logout:link, .a-logout:visited {
+    
+    background-color: silver;
+    color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+.a-logout:hover{
+    
+    background-color: #fafca5;
+    color: white;
+}
+
+/*----------------------------------*/
+
+
+.hola{
+
+    font-size: 19px;
+    background-color: transparent;
+}
+
+.hola:hover{
+
+    background-color: rgba(128, 128, 128, 0.493);
+    border-radius: 8%;
+    margin: 8px;
+    
+}
+
+.services{
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+.services:hover{
+
+    background-color: #fafca5;
+    color: black;
+    text-decoration: none;
+}

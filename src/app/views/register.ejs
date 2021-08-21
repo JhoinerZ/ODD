@@ -1,0 +1,107 @@
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Secretos de belleza</title>
+        <link rel="stylesheet" href="resources/css/registro.css">
+        <script src="https://kit.fontawesome.com/f2a1224df5.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <br>
+            <header>
+                 <nav class="navbar navbar-default">
+                     <div class="container-fluid">
+                         <div class="navbar-header">
+                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+                                 <span class="sr-only"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                             </button>
+    
+                             <a href="#"><img src="resources/img/logo_aplicativo.png" class="logo" width="85px" height="80px"></a>
+                         </div>
+    
+                         <div class="collapse navbar-collapse" id="navbar-1">
+                             <ul class="nav navbar-nav">
+                                            
+                             </ul>
+    
+    
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li class="hola"><a href="/login">Iniciar sesion</a></li>
+                                 <li class="hola"><a href="/register">Registrarse</a></li>
+                             </ul>
+                         </div>
+    
+                     </div>
+                 </nav>
+            </header>
+    
+        </div>
+
+  
+        <div class="formulario_registro">
+            <h1>REGISTRAR</h1>
+            <form action="register" method="POST">
+                <label for="">Nombre y Apellido</label>
+                <input type="text" name="nombre"  placeholder="Nombre Apellido" required>
+
+                <label for="">Usuario</label>
+                <input type="text" name="usuario" placeholder="Usuario1245" required>
+                
+                <label for="">Correo</label>
+                <input type="text" name="correo1" placeholder="correo@gmail.com" required>
+
+    <!--             <label for="">Confirmar correo</label>
+                <input type="text" name="correo2" required> -->
+                
+                <label for="">Contraseña</label>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                
+    <!--            <label for="">Confirmar contraseña</label>
+                <input type="password" name="contraseña2" placeholder="Confirme la contraseña" required> -->
+
+
+
+                <div style="display: inline;">
+                    <p>¿Ya tienes cuenta?<a class="logea" href="/login">Inicia sesión</a></p><a href="/" class="cancel">Cancelar</a><input type="submit" class="save" value="Registar">
+                </div>
+                
+            </form>    
+                
+        </div>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <% if(typeof alert != "undefined") {%>
+            
+            <script>
+                swal.fire({
+                    title: '<%= alertTitle %>',
+                    text: '<%= alertMessage %>',
+                    icon: '<%= alertIcon %>',
+                    showConfirmButton: '<%= showConfirmButton %>',
+                    timer: <%= timer %>
+                }).then(()=>{
+
+                    window.location='/<%= ruta %>'
+                })
+            </script>
+        <% } %>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </body>
+</html>

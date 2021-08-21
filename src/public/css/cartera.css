@@ -1,0 +1,121 @@
+*{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body{
+
+    
+    background-image: url(../img/fondo7.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+
+form{
+
+    width:340px;
+    height:320px;
+    background: transparent;
+    border-radius:8px;
+    box-shadow:0 0 40px -10px #000;margin:calc(50vh - 220px)auto;
+    padding:20px 30px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative
+    
+}
+
+h2{
+    
+    margin:10px 0;
+    padding-bottom:10px;
+    display: inline-table;
+    color:white;
+    border-bottom:3px solid #78788c;
+    text-align: center;
+
+
+}
+
+input[type=text],
+input[type=number]{
+
+    width:97%;
+    height: 100%;
+    padding:10px;
+    box-sizing:border-box;
+    background-color:  rgb(82, 82, 82);
+    margin: 7px;
+    transition:all 1s;
+    border: none;
+    border-bottom: 2px solid;
+    color: white;
+    
+    
+}
+
+
+input[type=submit]{
+    
+    width:25%;
+    height: 100%;
+    padding:10px;
+    box-sizing:border-box;
+    background-color:  rgb(82, 82, 82);
+    transition:all 1s;
+    border: none;
+    border-bottom: 2px solid;
+    color: white;
+    position: relative;
+    left: 40%;    
+    margin: 5%;
+}
+
+input[type=submit]:hover{
+
+    background-color: #fafca5;
+    color: black;
+}
+
+.container{
+
+    background-color: transparent;
+}
+
+.table{
+
+    background-color: black;
+    height: 50%;
+    width: 50%;
+    border-collapse: separate;
+}
+
+tr, td, th {
+
+    color: white;
+    
+    
+}
+
+.volver{
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px;
+    font-weight: normal;
+    margin: 18px;
+}
+
+.volver:hover{
+
+    background-color: #fafca5;
+    color: black;
+}
